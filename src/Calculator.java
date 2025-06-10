@@ -8,7 +8,7 @@ public class Calculator {
         String selection = input.next();   //get user input for operation to perform
         String error = "Invalid input entered. Terminating..."; //error message
 
-        switch(selection.lowerSelection){
+        switch(selection.toLowerCase()){
             case "add":
                 System.out.println("Enter two integers: ");
                 //check for valid input, looking for two integers
@@ -37,6 +37,7 @@ public class Calculator {
                     }
                 } else{
                     System.out.println(error);
+                }
                 break;
             case "multiply":
                 System.out.println("Enter two doubles: ");
@@ -60,6 +61,7 @@ public class Calculator {
                     double input1 = input.nextDouble();
                     if(input.hasNextDouble()){
                         double input2 = input.nextDouble();
+                        //check that divisor is not zero
                         if(input2 != 0){
                             System.out.printf("Answer: %.2f\n" + (input1 * input2));
                         } else{
@@ -78,6 +80,5 @@ public class Calculator {
             default:
                 break;
         }
-
     }
 }
